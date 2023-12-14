@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 
 const DB = 'mongodb://127.0.0.1:27017/my-chat?retryWrites=true&w=majority'
 mongoose
-  .connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(DB)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => {
     console.log('MongoDB ERROR MESSAGE:', err)
